@@ -16,9 +16,13 @@ def is_prime(x):
     else:
         return 0
 
-for num in range(3, 100):
-    check_1 = is_prime(num)
-    if check_1:
-        check_2 = is_prime(num + 2)
-        if check_2:
-            print(f"Bot {num} and {num + 2} are a twin!!")
+if __name__ == '__main__':
+    print("Please input the range of number that you want to find a twin.number")
+    start_num = int(input("It started at: "))
+    ended_num = int(input("It ended at: "))
+    for num in range(start_num, ended_num):
+        check_1 = is_prime(num)
+        if check_1:
+            check_2 = is_prime(num + 2)
+            if check_2:
+                print(f"Both {num} and {num + 2} are a twin!!")
